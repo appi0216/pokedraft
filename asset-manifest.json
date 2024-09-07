@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokedraft%3E/static/css/main.cb779a04.css",
+    "main.js": "/pokedraft%3E/static/js/main.03d08562.js",
+    "static/js/453.c2402752.chunk.js": "/pokedraft%3E/static/js/453.c2402752.chunk.js",
+    "index.html": "/pokedraft%3E/index.html",
+    "main.cb779a04.css.map": "/pokedraft%3E/static/css/main.cb779a04.css.map",
+    "main.03d08562.js.map": "/pokedraft%3E/static/js/main.03d08562.js.map",
+    "453.c2402752.chunk.js.map": "/pokedraft%3E/static/js/453.c2402752.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb779a04.css",
+    "static/js/main.03d08562.js"
+  ]
+}
