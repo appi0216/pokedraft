@@ -1,0 +1,204 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* 全体のコンテナにスクロールを追加 */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+}
+
+.content-container {
+  flex: 1;
+}
+
+.pokemon-selection {
+  max-height: 60vh; /* 高さを制限してスクロールを許可 */
+  overflow-y: scroll;
+}
+
+/* 追加のスタイルで画面の高さに応じて要素が表示されるように */
+html,
+body {
+  height: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  position: relative;
+  font-family: "Arial, sans-serif";
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://www.pokemonunite.jp/assets/img/top/hero_v4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: flex;
+  overflow: hidden; /* Ensure the pseudo-element covers the entire viewport */
+}
+
+.team-section {
+  margin: 10px 20px; /* Add horizontal margin to separate from the selection area */
+  flex: 1;
+  max-width: 45%;
+}
+
+.ban-container,
+.pick-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px; /* Optional: to add space between Bans and Picks */
+}
+
+.pokemon-selection {
+  display: flex;
+  justify-content: center;
+  padding: 100px; /* Add padding to adjust spacing between sections */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*プルダウン*/
+.dropdown {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.dropdown select {
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #333333;
+  color: #fff;
+}
+
+/*バンの斜線設定*/
+.banned {
+  position: relative;
+  opacity: 1;
+}
+
+.banned::after {
+  content: "";
+  position: absolute;
+  top: 42%;
+  left: -10px;
+  width: 100px;
+  height: 7px;
+  background-color: rgb(255, 0, 0);
+  transform: rotate(-45deg);
+}
+
+/*決定ボタン*/
+.confirm-button {
+  position: fixed;
+  bottom: 0; /* Adjusted from 10px to 0 to remove extra white space */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+.confirm-button:hover {
+  background-color: #4caf50;
+  color: white;
+  border: 2px solid white;
+}
+
+.undo-button,
+.reset-button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  position: fixed;
+  bottom: 0; /* Adjusted from 10px to 0 to remove extra white space */
+}
+
+.undo-button {
+  right: calc(50% + 100px);
+  transform: translateX(-50%);
+}
+
+.reset-button {
+  left: calc(50% + 200px);
+  transform: translateX(-50%);
+}
+
+.undo-button:hover {
+  background-color: #f0ad4e;
+  color: white;
+  border: 2px solid white;
+}
+
+.reset-button:hover {
+  background-color: #d9534f;
+  color: white;
+  border: 2px solid white;
+}
